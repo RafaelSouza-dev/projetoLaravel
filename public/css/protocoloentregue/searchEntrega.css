@@ -1,0 +1,45 @@
+/*  pesquisa pacientes */
+form#search{
+
+    padding: 10px 200px 05px 200px;
+}
+.form-group{
+
+    color: #5c5c5c;
+    font-weight: bold;
+
+}
+.input-group{
+
+    margin: 20px auto 0px 20px;
+
+}
+
+/*.input-group #listarPacientes{
+
+    margin: 0px 0px 0px 0px;
+    width: 260px;
+    border:none;
+    color:gray;
+
+}*/
+.pesquisarCpf,.listar{
+    transform: translateX(30%);
+    margin-left: -10%;
+}
+.input-group button{
+
+    margin: 5px auto 0px 30%;
+    width: 300px;
+}
+
+/* fieldset e legend */
+fieldset{
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+.legend{
+
+    width: auto;
+}

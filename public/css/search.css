@@ -1,0 +1,142 @@
+/*  pesquisa pacientes */
+form#search{
+
+    padding: 10px 200px 05px 200px;
+}
+.form-group{
+
+    color: #5c5c5c;
+    font-weight: bold;
+
+}
+.form-check{
+
+    color: gray;
+    margin-left: 30px;
+}
+
+
+
+.input-group{
+
+    margin: 20px auto 0px 20px;
+
+}
+.input-group #addPaciente{
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color:#fff;
+    margin-left: 30px;
+}
+.input-group #listarPacientes{
+
+    margin: 0px 0px 0px 0px;
+    width: 260px;
+    border:none;
+    color:gray;
+
+}
+
+.input-group button{
+
+    margin: 5px auto 0px 25%;
+    width: 300px;
+}
+
+
+/* fieldset e legend */
+fieldset{
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+fieldset#checkbox{
+
+    margin-left: 30px;
+    width: 230px;
+}
+.legend{
+
+    width: auto;
+}
+
+/* tamanho dos ícones   */
+#icons{
+    font-size: 20px;
+}
+
+
+
+
+
+/*.input-group a{
+
+    border: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin: 0px 0px 0px 0px;
+
+}
+.input-group a:hover{
+
+    transition-duration: 0.5s;
+}
+.input-group li{
+
+    margin: 0px 0px 0px 25px;
+}
+.input-group li#filtro{
+
+    list-style: none;
+    border: solid #ced4da;
+    border-width: 0.5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: gray;
+    margin: 0px;
+
+}
+
+.filtrar_e_listar a{
+
+    color: gray;
+}*/
+
+/*#PesquisarNomeCpf{
+
+
+
+}
+
+
+
+
+
+
+
+
+/* retirando o bold dos dados
+span{
+
+    font-weight: normal;
+}
+
+#buscando_por{
+    color:#5c5c5c;
+    margin-top: 10px;
+    font-weight: bold;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+

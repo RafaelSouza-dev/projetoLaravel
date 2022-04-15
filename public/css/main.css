@@ -1,0 +1,99 @@
+body{
+
+    background-color: rgb(248, 248, 248);
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+
+/*navbar*/
+.navbar{
+
+    height: 60px;
+    background-color: #fff;
+}
+.navbar a{
+
+    color:#5c5c5c;
+    text-decoration: none;
+
+}
+.navbar li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px 10px;
+
+}
+.navbar ul{
+
+    /*transform: translate(-50%, 10px);
+    margin-left: 20%;*/
+    margin: 5px 420px 0px auto;
+}
+.navbar a:hover{
+
+    color:#007bff;
+}
+/*#dropdownBeneficio{
+
+    position: absolute;
+    top: 19px;
+    right: 410px;
+}*/
+#dropdownGerenciar{
+
+
+    position: absolute;
+    top: 19px;
+    right: 430px;
+}
+
+
+
+
+
+/* ESTILO DA NAVBAR QUE ESTÁ NO ARQUIVO navigation-menu*/
+.container ul{
+
+    transform: translateX(-53%);
+    left: 50%;
+    top: 20px;
+    position: absolute;
+}
+.container li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px 10px;
+
+}
+.container a{
+
+    color:#5c5c5c;
+}
+.container a:hover{
+
+    color:#007bff;
+}
+
+
+/* span de cor azul */
+.azul{
+
+    color: rgb(73, 73, 238);
+}
+
+
+
+/*corpo da página*/
+.containerPrincipal{
+
+    margin: 20px 20px 20px 20px;
+    position: relative;
+}
+
+
+
+
+
+

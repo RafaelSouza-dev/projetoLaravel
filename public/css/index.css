@@ -1,0 +1,57 @@
+#containerPesquisarPaciente{
+
+    background-image: url("../img/medico3.png");
+    background-size: cover;
+    padding: 50px;
+    text-align: center;
+    height: 600px;
+    border-radius: 5px;
+}
+
+
+
+/* h1 e btn do login */
+.btnEh1Login{
+
+    margin: 80px 0px auto 30px;
+    position: absolute;
+}
+.azul{
+
+    color: #005d9f;
+}
+.btnEh1Login li{
+
+    list-style-type: none;
+
+}
+.btnEh1Login a{
+
+    text-decoration: none;
+}
+.btnEh1Login a:hover{
+
+    color:#fff;
+    background-color: #005d9f;
+}
+.btnEh1Login li a#cadastrar{
+
+    margin-top: 10px;
+}
+.btnEh1Login a#cadastrar:hover{
+
+    color:#fff;
+    background-color: #28a745;
+}
+#icons{
+    font-size: 20px;
+}
+/*footer{
+
+    background-color: #c8f0e1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+
+}

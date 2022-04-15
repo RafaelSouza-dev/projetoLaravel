@@ -1,0 +1,201 @@
+/*  pesquisa pacientes */
+form#pesquisarPacientes{
+
+    padding: 10px 200px 05px 200px;
+}
+.form-group{
+
+    color: #5c5c5c;
+    font-weight: bold;
+
+}
+.form-group a{
+
+    list-style-type: none;
+    padding: 0px 5px 10px 10px;
+}
+.form-check{
+
+    color: gray;
+    margin-left: 30px;
+}
+
+
+
+
+
+.input-group{
+
+    margin: 20px auto 0px 20px;
+
+}
+.input-group #addPaciente{
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color:#fff;
+    margin-left: 30px;
+}
+.input-group #listarPacientes{
+
+    margin: 0px 0px 0px 0px;
+    width: 260px;
+    border:none;
+    color:gray;
+
+}
+.input-group button{
+
+    margin: 5px auto 0px 25%;
+    width: 300px;
+}
+
+
+
+/* fieldset e legend  */
+fieldset{
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+fieldset#checkbox{
+
+    margin-left: 30px;
+    width: 230px;
+}
+.legend{
+
+    width: auto;
+}
+
+
+
+/*  caixa que contém os dados vindos do banco */
+#box{
+
+    background-color:#fff;
+    padding:0px 100px 0px 100px;
+    display: flex;
+    border: solid #e9e9e9;
+    border-width: 0.5px;
+    border-radius: 5px;
+    width: 1000px;
+    margin: 0px auto 50px auto;
+}
+
+
+/* retirando o bold dos dados */
+span{
+
+
+    font-weight: normal;
+
+}
+
+/*  destacando o nome dos pacientes */
+#campoDestaque{
+
+    font-size: 30px;
+}
+
+/* mexendo com os campos */
+#camposDaDireita{
+
+    margin-top: 20px;
+}
+
+/*  mexendo com os campos do cpf ,rg ,dn e sexo. */
+#camposDoMeio{
+
+    margin: 20px auto 10px auto;
+    width: 300px;
+
+}
+#camposDoMeio fieldset{
+
+    width: 200px;
+    margin-top: 10px;
+}
+#camposDoMeio #acoesRapidas{
+
+    margin-bottom: 10px;
+}
+#camposDoMeio .form-group{
+
+    margin: 5px auto 0px 40px;
+}
+
+/* mexendo com os campos nome ,sus ,nome pai e nome mãe */
+#camposDaEsquerda{
+
+    width: 380px;
+
+}
+
+
+
+/* tamanho dos ícones ion-icon  */
+#icons{
+    font-size: 20px;
+}
+
+
+
+/*  botões  */
+.btn-auxBrasil{
+
+    color: #007bff;
+    background-color: #fff;
+    border: none;
+}
+.btn-editar{
+
+    border: none;
+    color: #28a745;
+
+}
+.btn-editar:hover{
+    color: #fff;
+    background-color: #28a745;
+}
+.btn-deletar{
+
+    color: #dc3545;
+    border: none;
+    background-color: #fff; /*ver porque precisei colocar o bgc ,dando erro */
+}
+.btn-deletar:hover{
+    color: #fff;
+    background-color: #dc3545;
+}
+
+
+
+
+
+/* exame de sangue
+.dadosDoExame{
+
+    margin:4px 0px 0px 20px;
+}
+form#dadosExame{
+
+    padding: 50px;
+}
+/*======================*/
+
+
+
+/* covid
+form#dadosCovid{
+
+    padding: 50px;
+}
+form label{
+
+    font-weight: bold;
+    color: #5c5c5c;
+}
+/*======================*/
+
+
