@@ -13,23 +13,19 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="numeroMicroarea">Número<span class="azul">*</span></label>
-                    <input type="text" name="numero_microarea" id="numeroMicroarea" class="form-control col-md-3" maxlength="3" required>
+                    <input type="text" name="numero_microarea" id="numeroMicroarea" class="form-control" maxlength="3" required>
                 </div>
-
-                @php
-                    /*<div class="form-group col-md-4">
-                    <label for="agenteMicroarea">Agente da nova microarea<span class="azul">*</span></label>
+                <div class="form-group col-4">
+                    <label for="agenteMicroarea">Agente da microarea<span class="azul">*</span></label>
                     <select class="form-control" name="agenteMicroarea" id="agenteMicroarea">
                         <option value="">Selecione</option>
                         @foreach ($agente as $a1 )
-                        <option value="agente">
+                        <option value="{{$a1->id}}">
                             {{$a1->name}}
                         </option>
                         @endforeach
                     </select>
-                </div>*/
-                @endphp
-
+                </div>
             </div>
             <div class="btn-grupo">
                 <a href="{{ url()->previous() }}" class="btnGrupo btn btn-outline-danger" id="btnCancelar">Cancelar</a>
