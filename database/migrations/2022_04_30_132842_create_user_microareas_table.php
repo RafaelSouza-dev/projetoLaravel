@@ -15,10 +15,10 @@ class CreateUserMicroareasTable extends Migration
     {
         Schema::create('user_microareas', function (Blueprint $table) {
             $table->increments('id_usermicroareas');
-            $table->integer('id_user_fk')->unsigned();
-            $table->foreign('id_user_fk')->references('id')->on('users')->onUpdate('cascade');
-            $table->integer('id_m_areas')->unsigned();
-            $table->foreign('id_m_ares_fk')->references('id_m_areas')->on('m_areas')->onUpdate('cascade');
+            $table->bigInteger('id_user_fk')->unsigned();
+            $table->foreign('id_user_fk')->references('id')->on('users');
+            $table->integer('id_m_areas_fk')->unsigned();
+            $table->foreign('id_m_areas_fk')->references('id_m_areas')->on('m_areas')->onUpdate('cascade');
             $table->timestamps();
         });
     }
