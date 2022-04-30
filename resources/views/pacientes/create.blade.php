@@ -83,14 +83,20 @@
                     <input type="text" name="uf" id="uf" class="form-control" required>
                 </div>
             </div>
-            <div class="form-group">
-                <label>Microárea: <span class="azul">*</span></label>
-                <select class="form-control col-md-2" name="id_m_areas" id="dose" required>
-                    <option selected>Selecione</option>
-                    @foreach ($microarea as $m1 )
-                        <option value="{{$m1->id_m_areas}}">{{$m1->numero_microarea}}</option>
-                    @endforeach
-                </select>
+            <div class="form-row">
+                <div class="form-group col-3">
+                    <label>Microárea: <span class="azul">*</span></label>
+                    <select class="form-control" name="id_m_areas" id="dose" required>
+                        <option selected>Selecione</option>
+                        @foreach ($microarea as $m1 )
+                            <option value="{{$m1->id_m_areas}}">{{$m1->numero_microarea}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="agente">Agente Comunitário <span class="azul">*</span></label>
+                    <input type="text" name="agentecomunitario" class="form-control" required>
+                </div>
             </div>
         </div><br>
 
