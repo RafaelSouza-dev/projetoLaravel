@@ -8,6 +8,7 @@ use App\Models\Endereco;
 use App\Models\M_area;
 use Illuminate\Http\Request;
 use App\Models\Paciente;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
 
@@ -40,7 +41,8 @@ class EsfController extends Controller
     {
         $pacientes = Paciente::all();
         $microarea = M_area::all();
-        return view('pacientes.create', ['pacientes' => $pacientes,'microarea'=>$microarea]);
+        $usuario = User::all();
+        return view('pacientes.create', ['pacientes' => $pacientes,'microarea'=>$microarea, 'usuario'=>$usuario]);
 
     }
 
