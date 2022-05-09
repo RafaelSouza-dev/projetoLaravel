@@ -99,6 +99,28 @@ span{
     margin-top: 20px;
 }
 
+/* mexendo com o nome do agente da área*/
+#camposDoMeio{
+
+    position: absolute;
+    margin-top: 55px;
+
+}
+
+/* mexendo com o botão editar*/
+#camposDaDireita{
+
+    position: relative;
+    top: 20px;
+    left: 200px;
+
+}
+#camposDaDireita a{
+
+    position: absolute;
+    left:300px
+}
+
 
 /* mexendo com os campos ruas e contador de pacientes*/
 .subContainer{
@@ -113,14 +135,6 @@ span{
     margin-right: 70px;
 }
 
-
-/* mexendo com os campos editar e excluir*/
-#camposDoMeio{
-
-    margin: 20px 0px 0px 100px;
-
-
-}
 
 
 

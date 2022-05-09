@@ -58,17 +58,16 @@
                             </div>
                         </div>
                         <div id="camposDoMeio">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <a href="/microarea/edit/{{ $m1->id_m_areas }}" id="editar" class="btn btn-editar">
-                                        <ion-icon id="icons" name="create-outline"></ion-icon>Editar
-                                    </a>
-                                </div>
-                                <!--<div class="form-group">
-                                    <button type="button" class="btn btn-deletar" data-toggle="modal" data-target="#exampleModal" data-whatever="{{$m1->numero_microarea}}">
-                                        <ion-icon id="icons" name="trash-bin-outline"></ion-icon>Deletar</button>
-                                </div>-->
+                            <div class="form-group">
+                                @foreach ($m1->usuario as $usuario)
+                                    <span><strong>{{$usuario->name}}</strong></span>
+                                @endforeach
                             </div>
+                        </div>
+                        <div id="camposDaDireita">
+                            <a href="/microarea/edit/{{ $m1->id_m_areas }}" id="editar" class="btn btn-editar">
+                                <ion-icon id="icons" name="create-outline"></ion-icon>Editar
+                            </a>
                         </div>
                     </div><hr>
                     <div class="subContainer">

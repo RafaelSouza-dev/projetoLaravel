@@ -65,10 +65,11 @@ class MicroareaController extends Controller
 
        if('pesquisarMicroarea'){
 
-            $microarea = M_area::with('rua')->where([
+            $microarea = M_area::with('rua','usuario')->where([
                 ['numero_microarea','like','%'.$pesquisarMicroarea.'%'],
             ])->orderByRaw('id_m_areas  DESC')
             ->paginate(5);
+
         }
         return view('gerenciar.microarea.showMicroarea',['microarea'=>$microarea,'pesquisarMicroarea'=>$pesquisarMicroarea]);
     }
