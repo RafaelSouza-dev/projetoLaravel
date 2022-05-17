@@ -24,7 +24,7 @@
                         <ul class="dropdown-menu" id="dropdown-menu-beneficio" aria-labelledby="dropdownMenuLink">
                             <li><a class="dropdown-item" href="/beneficio">Auxílio Brasil</a></li><br>
                         </ul>
-                    </div>-->
+                    </div>
 
                     <div class="dropdown" id="dropdownGerenciar">
                         <li><a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,9 +37,51 @@
                             <li><a class="dropdown-item" href="/rua/search">Rua</a></li><br>
                         </ul>
                     </div>
-                </ul>
+                </ul>-->
             </div>
         @endauth
+
+        <style>
+            #dropdownGerenciar{
+                position: absolute;
+                left: 820px;
+                top:15px;
+            }
+        </style>
+
+        <!-- inicio dropdown Gerenciar -->
+        <div class="hidden sm:flex sm:items-center sm:ml-6" id="dropdownGerenciar">
+            <div class="ml-3 relative">
+                <x-jet-dropdown align="right" width="48">
+                    <x-slot name="trigger">
+                        <span class="inline-flex rounded-md">
+                            <button type="button"
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-700 focus:outline-none transition">
+                                Gerenciar
+                                <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </span>
+                    </x-slot>
+
+                    <x-slot name="content">
+                        <div class="block px-4 py-2 text-xs">
+                            <ul class="dropdown-menu" id="dropdown-menu-gerenciar" aria-labelledby="dropdownMenuLink">
+                                <x-jet-dropdown-link href="/vacina">Vacina</x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="/protocolo">Protocolo</x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="/microarea/search">Microarea</x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="/Rua/search">Rua</x-jet-dropdown-link>
+                            </ul>
+                        </div>
+                    </x-slot>
+                </x-jet-dropdown>
+            </div>
+        </div>
+        <!-- fim dropdown Gerenciar -->
 
 
 
@@ -149,7 +191,7 @@
                         <x-slot name="content">
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
+                                {{ __('Gerenciar conta') }}
                             </div>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
