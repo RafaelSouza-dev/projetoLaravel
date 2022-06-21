@@ -2,13 +2,16 @@
 
 use App\Http\Controllers\ComorbidadeController;
 use App\Http\Controllers\CovidController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Entrega_ProtocolosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EsfController;
 use App\Http\Controllers\MicroareaController;
 use App\Http\Controllers\ProtocoloController;
 use App\Http\Controllers\RuaController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\VacinaController;
+use App\Models\M_area;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,6 +93,13 @@ Route::get('/covid/edit/{id_covid}',[CovidController::class,'edit'])->middleware
 Route::put('/covid/update/{id_covid}',[CovidController::class,'update'])->middleware('auth');
 Route::post('/covid/destroy/{id_covid}',[CovidController::class,'destroy'])->middleware('auth');
 
+Route::get('/usuario',[UserController::class,'index'])->middleware('auth');
+Route::get('/usuario/show',[UserController::class,'show'])->middleware('auth');
+Route::get('/usuario/edit/{id}',[UserController::class,'edit'])->middleware('auth');
+Route::put('/usuario/update/{id}',[UserController::class,'update'])->middleware('auth');
+Route::post('/usuario/destroy/{id}',[UserController::class,'destroy'])->middleware('auth');
+
+Route::get('/teste',[DashboardController::class,'show']);
 
 
 
@@ -103,5 +113,7 @@ Route::get('/sei lá/{id}', function($id){
 })*/
 
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard', function () {
-    return view('dashboard');
+    $microarea = M_area::with('usuario','rua','paciente')
+    ->get();
+    return view('dashboard',['microarea' =>$microarea]);
 })->name('dashboard');

@@ -53,6 +53,7 @@
                                 Gerenciar
                                 </a>
                                 <ul class="dropdown-menu" id="dropdown-menu-gerenciar" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/usuario/show">Usuários</a></li><br>
                                     <li><a class="dropdown-item" href="/vacina">Vacina</a></li><br>
                                     <li><a class="dropdown-item" href="/protocolo">Protocolo</a></li><br>
                                     <li><a class="dropdown-item" href="/microarea/search">Microarea</a></li><br>

@@ -86,16 +86,12 @@
             <div class="form-row">
                 <div class="form-group col-3">
                     <label>Microárea: <span class="azul">*</span></label>
-                    <select class="form-control" name="id_m_areas" id="dose" required>
+                    <select class="form-control" name="id_m_areas" id="microarea" required>
                         <option selected>Selecione</option>
                         @foreach ($microarea as $m1 )
                             <option value="{{$m1->id_m_areas}}">{{$m1->numero_microarea}}</option>
                         @endforeach
                     </select>
-                </div>
-                <div class="form-group">
-                    <label for="agente">Agente Comunitário <span class="azul">*</span></label>
-                    <input type="text" name="agentecomunitario" class="form-control" required>
                 </div>
             </div>
         </div><br>
@@ -153,7 +149,7 @@
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label>Celular:<span class="azul">*</span></label>
-                    <input type="text" name="contato" id="contato" class="form-control">
+                    <input type="text" name="contato" id="contato" class="form-control" required>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Residencial</label>
@@ -165,4 +161,5 @@
         <button type="submit" class="salvar btnGrupo btn btn-outline-success">Salvar</button>
     </form>
     <script src="../js/create.js"></script>
+    <script type="text/javascript" src="../js/jsapi.js"></script>
 @endsection

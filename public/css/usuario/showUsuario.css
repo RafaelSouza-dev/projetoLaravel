@@ -1,0 +1,11 @@
+/* fieldset e legend  */
+fieldset{
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+.legend{
+
+    width: auto;
+}
+

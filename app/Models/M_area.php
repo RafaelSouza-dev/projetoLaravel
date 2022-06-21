@@ -23,6 +23,6 @@ class M_area extends Model
     }
     public function usuario()
     {
-        return $this->belongsToMany(User::class, 'user_microareas','id_m_areas_fk','id_user_fk');
+        return $this->belongsToMany(User::class, 'user_microareas','id_m_areas_fk','id_user_fk')->withPivot('id_user_fk');
     }
 }

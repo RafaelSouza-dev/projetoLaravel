@@ -40,7 +40,7 @@ class EsfController extends Controller
     public function create()
     {
         $pacientes = Paciente::all();
-        $microarea = M_area::all();
+        $microarea = M_area::with('usuario')->get();
         $usuario = User::all();
         return view('pacientes.create', ['pacientes' => $pacientes,'microarea'=>$microarea, 'usuario'=>$usuario]);
 

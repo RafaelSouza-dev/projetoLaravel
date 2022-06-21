@@ -60,7 +60,7 @@
                         <div id="camposDoMeio">
                             <div class="form-group">
                                 @foreach ($m1->usuario as $usuario)
-                                    <span><strong>{{$usuario->name}}</strong></span>
+                                    <span><strong>Agente {{$usuario->name}}</strong></span>
                                 @endforeach
                             </div>
                         </div>

@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\M_area;
 use App\Models\User;
-use App\Models\User_microareas;
 use Illuminate\Http\Request;
 
-use function Ramsey\Uuid\v1;
-
-class DashboardController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -50,10 +46,8 @@ class DashboardController extends Controller
      */
     public function show()
     {
-       $microarea = M_area::with('usuario','rua','paciente')
-       ->get();
-        return view('dashboardUser.welcome',['microarea'=>$microarea]);
-
+        $usuario = User::all();
+        return view('gerenciar.usuario.usuario',['usuario'=>$usuario]);
     }
 
     /**
