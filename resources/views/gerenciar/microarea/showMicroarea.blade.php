@@ -72,9 +72,13 @@
                     </div><hr>
                     <div class="subContainer">
                         <div class="form-group" id="ruas">
+                            @php $count = 0 @endphp
                             @foreach ($m1->rua as $rua )
-                                <p style="text-align: center;">{{$rua->nome_rua}}</p>
+                                @php $count = $count + 1 @endphp
+                                <!--<p style="text-align: center;">{{$rua->nome_rua}}</p>-->
                             @endforeach
+                            {{$count}}
+                            <span>Ruas nessa microarea</span>
                         </div>
                         <div class="form-group" id="countPacientes">
                             @php $count = 0 @endphp
@@ -82,7 +86,7 @@
                                 @php $count = $count + 1 @endphp
                             @endforeach
                             {{$count}}
-                            <span>Paciente(s) nessa microarea</span>
+                            <span>Pacientes nessa microarea</span>
                         </div>
                     </div>
                 </div>

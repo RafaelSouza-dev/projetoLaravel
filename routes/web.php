@@ -12,6 +12,7 @@ use App\Http\Controllers\RuaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VacinaController;
 use App\Models\M_area;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,7 +114,7 @@ Route::get('/sei lá/{id}', function($id){
 })*/
 
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard', function () {
-    $microarea = M_area::with('usuario','rua','paciente')
-    ->get();
-    return view('dashboard',['microarea' =>$microarea]);
+    $microarea = M_area::with('usuario','rua','paciente')->get();
+    $usuario = User::all();
+    return view('dashboard',['microarea' =>$microarea,'usuario'=>$usuario]);
 })->name('dashboard');

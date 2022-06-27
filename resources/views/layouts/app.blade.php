@@ -17,6 +17,12 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <script src="../../js/jquery-3.4.1.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="../../js/bootstrap.bundle.min.js" defer></script>
+        <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js" defer></script>
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
