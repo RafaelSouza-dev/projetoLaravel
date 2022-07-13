@@ -58,7 +58,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario = User::findOrFail($id);
+        return view('usuarios.editUsuario',['usuario'=>$usuario]);
     }
 
     /**
@@ -70,7 +71,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario = User::findOrFail($request->id)
+        ->update($request->all());
+
+        return redirect('/dashboard')->with('msgSucesso', 'Usuário '.$request->name .' editado com sucesso!');
     }
 
     /**

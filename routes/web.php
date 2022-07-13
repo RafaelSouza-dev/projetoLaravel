@@ -100,10 +100,6 @@ Route::get('/usuario/edit/{id}',[UserController::class,'edit'])->middleware('aut
 Route::put('/usuario/update/{id}',[UserController::class,'update'])->middleware('auth');
 Route::post('/usuario/destroy/{id}',[UserController::class,'destroy'])->middleware('auth');
 
-Route::get('/teste',[DashboardController::class,'show']);
-
-
-
 
 /* outra forma de acessar o controller
 Route::get('/esfs/create',[EsfController::class, 'create']);

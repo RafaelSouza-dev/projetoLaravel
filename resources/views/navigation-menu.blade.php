@@ -74,7 +74,7 @@
                                 <x-jet-dropdown-link href="/vacina">Vacina</x-jet-dropdown-link>
                                 <x-jet-dropdown-link href="/protocolo">Protocolo</x-jet-dropdown-link>
                                 <x-jet-dropdown-link href="/microarea/search">Microarea</x-jet-dropdown-link>
-                                <x-jet-dropdown-link href="/Rua/search">Rua</x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="/rua/search">Rua</x-jet-dropdown-link>
                             </ul>
                         </div>
                     </x-slot>

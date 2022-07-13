@@ -12,6 +12,12 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <x-jet-welcome />
 
+                @if (session('msgSucesso'))
+                    <p class="msgSucesso">{{ session('msgSucesso') }}</p>
+                @elseif(session('msgFracasso'))
+                    <p class="msgFracasso">{{ session('msgFracasso') }}</p>
+                @endif
+
                 <style>
                     .containerPrincipal{
                         padding: 0px 100px 0px 100px;
@@ -38,29 +44,39 @@
                     i{
                         color: #28a745;
                     }
+                    #botaoEditar{
+                        color:#28a745;
+                    }
+                    #botaoEditar:hover{
+                        background-color: #28a745;
+                        border-radius:5px;
+                        transition-duration: 0.2s;
+                        padding: 8px 15px 8px 15px;
+                        color:#fff;
+                    }
                 </style>
 
                 <div class="containerPrincipal">
                     @if (Auth::User()->name == 'Administrador')<!-- condição para mostrar usuários somentte para adm--->
-                        <div class="usuarios">
-                            @foreach ($usuario as $u1)
-                                <fieldset class="border">
-                                    <legend class="legend"></legend>
-                                    <div class="form-group">
-                                        <span class="mt-8 text-2xl" id="usuario">{{$u1->name}}</span>
+                        <fieldset class="border">
+                            <legend class="legend"></legend>
+                                <div class="usuarios"><br>
+                                    @foreach ($usuario as $u1)
                                         <div class="form-group">
-                                            Email: <span>{{$u1->email}}</span>
+                                            <span class="mt-8 text-2xl" id="usuario">{{$u1->name}}</span>
+                                            <div class="form-group">
+                                                Email: <span>{{$u1->email}}</span>
+                                            </div><br>
+                                            <div class="form-group">
+                                                <a href="/usuario/edit/{{ $u1->id }}" id="botaoEditar">Editar</a>
+                                            </div>
+                                            <div class="form-group">
+                                                <!--<button type="button" class="btn btn-deletar" data-toggle="modal" data-target="#exampleModal" data-whatever="{{$u1->name}}">Deletar</button>-->
+                                            </div><br><hr><br>
                                         </div>
-                                        <div class="form-group">
-                                            <a href="/usuarios/edit/{{ $u1->id }}" id="botaoEditar" class="btn btn-editar">Editar</a>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="button" class="btn btn-deletar" data-toggle="modal" data-target="#exampleModal" data-whatever="{{$u1->name}}">Deletar</button>
-                                        </div>
-                                    </div>
-                                </fieldset> <br>
-                            @endforeach
-                        </div>
+                                    @endforeach
+                                </div>
+                        </fieldset>
                     @else
                         <div class="microarea">
                             <p class=" mt-8 text-2xl"><strong>Minha microarea</strong></p>
@@ -71,13 +87,12 @@
                                     @endif
                                 @endforeach
                             @endforeach
-                        </div>
-                        <br>
+                        </div><br>
 
 
-                        <div class="pacientes">
-                            <fieldset class="border">
-                                <legend class="legend"></legend>
+                        <fieldset class="border">
+                            <legend class="legend"></legend>
+                            <div class="pacientes">
                                 @php $count = 0 @endphp
                                 <p class="text-gray-700 mt-8 text-2xl"><strong>Meus pacientes</strong></p>
                                 <div class="dados">
@@ -92,13 +107,10 @@
                                         @endforeach
                                     @endforeach
                                 </div>
-                            <i> {{$count}} Pacientes no total</i>
-                            </fieldset> <br>
-                        </div>
+                                <i> {{$count}} Pacientes no total</i><br>
+                            </div><br><hr>
 
-                        <div class="ruas">
-                            <fieldset class="border">
-                                <legend class="legend"></legend>
+                            <div class="ruas">
                                 @php $count = 0 @endphp
                                 <p class="text-gray-700 mt-8 text-2xl"><strong>Minhas ruas</strong></p>
                                 <div class="dados">
@@ -114,8 +126,9 @@
                                     @endforeach
                                 </div>
                                 <i>{{$count}} Ruas no total</i>
-                            </fieldset>
-                        </div>
+                            </div>
+                        </fieldset>
+
                     @endif
                 </div>
                 <br>

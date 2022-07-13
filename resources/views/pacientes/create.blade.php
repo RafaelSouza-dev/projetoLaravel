@@ -149,11 +149,11 @@
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label>Celular:<span class="azul">*</span></label>
-                    <input type="text" name="contato" id="contato" class="form-control" required>
+                    <input type="text" name="contato" id="contato" class="form-control" maxlength="11" required>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Residencial</label>
-                    <input type="text" name="residencial" id="residencial" class="form-control inputCResidencial">
+                    <input type="text" name="residencial" id="residencial" class="form-control inputCResidencial" maxlength="10">
                 </div>
             </div>
         </div>
@@ -162,4 +162,28 @@
     </form>
     <script src="../js/create.js"></script>
     <script type="text/javascript" src="../js/jsapi.js"></script>
+
+    <!-- CHECKBOX SEXO -->
+    <script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", function(e) {
+            var myCheckbox = document.getElementById("sexo");
+            var myCheckboxMsg = "Selecione esse campo";
+            myCheckbox.setCustomValidity(myCheckboxMsg);
+            myCheckbox.addEventListener("change", function(e) {
+              this.setCustomValidity(this.validity.valueMissing ? myCheckboxMsg : "");
+            }, false);
+         }, false);
+    </script>
+
+    <!--<script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", function(e) {
+            var myCheckbox = document.getElementById("checkboxComorbidades");
+            var myCheckboxMsg = "Selecione esse campo";
+            myCheckbox.setCustomValidity(myCheckboxMsg);
+            myCheckbox.addEventListener("change", function(e) {
+            this.setCustomValidity(this.validity.valueMissing ? myCheckboxMsg : "");
+            }, false);
+        }, false);
+    </script> -->
+
 @endsection

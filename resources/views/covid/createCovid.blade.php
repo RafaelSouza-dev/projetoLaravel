@@ -47,8 +47,8 @@
             <h3>Teste de COVID</h3>
             <div class="form-group">
                 <label for="teste">Já realizou o teste de COVID?</label>
-                <input type="radio" name="fez_teste" id="testeSim" value="sim">Sim
-                <input type="radio" name="fez_teste" id="testeNao" value="nao">Não
+                <input type="radio" name="fez_teste" id="testeSim" value="sim" required>Sim
+                <input type="radio" name="fez_teste" id="testeNao" value="nao" required>Não
             </div>
             <div class="resultadoEData">
                 <div class="form-group" id="resultadoTeste">
@@ -129,11 +129,11 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Celular:<span class="azul">*</span></label>
-                    <input type="text" name="celular" id="contato" class="form-control" required>
+                    <input type="text" name="celular" id="contato" class="form-control" maxlength="11" required>
                 </div>
                 <div class="form-group" id="telefoneResidencial">
                     <label>Residencial</label>
-                    <input type="text" name="residencial" id="residencial" class="form-control">
+                    <input type="text" name="residencial" id="residencial" class="form-control" maxlength="10">
                 </div>
             </div>
             <a href="{{ url()->previous() }}" class="cancelar btnGrupo btn btn-outline-danger">Cancelar</a>

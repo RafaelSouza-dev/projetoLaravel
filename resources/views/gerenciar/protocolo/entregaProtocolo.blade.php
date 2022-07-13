@@ -44,8 +44,8 @@
             <h3>Pessoa de confiança</h3>
             <div class="form-group" id="entregar">
                 <label for="pessoa_confianca">Vai ser entregue a uma pessoa de confiança?</label><br>
-                <input name="entrega_pessoa_confianca" type="radio" id="radioSim" value="sim">Sim
-                <input name="entrega_pessoa_confianca" type="radio" id="radioNao" value="nao">Não
+                <input name="entrega_pessoa_confianca" type="radio" id="radioSim" value="sim" required>Sim
+                <input name="entrega_pessoa_confianca" type="radio" id="radioNao" value="nao" required>Não
             </div>
 
             <div class="form-row" id="boxPessoaConfianca">
